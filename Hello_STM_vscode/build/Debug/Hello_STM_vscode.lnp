@@ -1,0 +1,20 @@
+-mthumb -mcpu=cortex-m3 -T "c:/Users/86181/Documents/vscode/.vscode/STM32/Hello_STM_vscode/STM32F103RCTx_FLASH.ld" --specs=nosys.specs --specs=nano.specs -Wl,--gc-sections -Wl,--print-memory-usage
+-Wl,-Map=./build/Debug/Hello_STM_vscode.map
+-o ./build/Debug/Hello_STM_vscode.elf ./build/Debug/main.o
+./build/Debug/stm32f1xx_hal_msp.o
+./build/Debug/stm32f1xx_it.o
+./build/Debug/system_stm32f1xx.o
+./build/Debug/stm32f1xx_hal.o
+./build/Debug/stm32f1xx_hal_cortex.o
+./build/Debug/stm32f1xx_hal_dma.o
+./build/Debug/stm32f1xx_hal_exti.o
+./build/Debug/stm32f1xx_hal_flash.o
+./build/Debug/stm32f1xx_hal_flash_ex.o
+./build/Debug/stm32f1xx_hal_gpio.o
+./build/Debug/stm32f1xx_hal_gpio_ex.o
+./build/Debug/stm32f1xx_hal_pwr.o
+./build/Debug/stm32f1xx_hal_rcc.o
+./build/Debug/stm32f1xx_hal_rcc_ex.o
+./build/Debug/stm32f1xx_hal_tim.o
+./build/Debug/stm32f1xx_hal_tim_ex.o
+./build/Debug/startup_stm32f103xe.o -lm

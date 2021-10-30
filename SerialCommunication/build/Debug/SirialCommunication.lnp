@@ -1,0 +1,25 @@
+-mthumb -mcpu=cortex-m3 -T "c:/Users/86181/Documents/vscode/STM32/SerialCommunication/STM32F103RCTx_FLASH.ld" --specs=nosys.specs -Wl,--gc-sections -Wl,--print-memory-usage
+-Wl,-Map=./build/Debug/SirialCommunication.map
+-o ./build/Debug/SirialCommunication.elf ./build/Debug/delay.o
+./build/Debug/dma.o
+./build/Debug/gpio.o
+./build/Debug/main.o
+./build/Debug/stm32f1xx_hal_msp.o
+./build/Debug/stm32f1xx_it.o
+./build/Debug/system_stm32f1xx.o
+./build/Debug/usart.o
+./build/Debug/stm32f1xx_hal.o
+./build/Debug/stm32f1xx_hal_cortex.o
+./build/Debug/stm32f1xx_hal_dma.o
+./build/Debug/stm32f1xx_hal_exti.o
+./build/Debug/stm32f1xx_hal_flash.o
+./build/Debug/stm32f1xx_hal_flash_ex.o
+./build/Debug/stm32f1xx_hal_gpio.o
+./build/Debug/stm32f1xx_hal_gpio_ex.o
+./build/Debug/stm32f1xx_hal_pwr.o
+./build/Debug/stm32f1xx_hal_rcc.o
+./build/Debug/stm32f1xx_hal_rcc_ex.o
+./build/Debug/stm32f1xx_hal_tim.o
+./build/Debug/stm32f1xx_hal_tim_ex.o
+./build/Debug/stm32f1xx_hal_uart.o
+./build/Debug/startup_stm32f103xe.o -lm
