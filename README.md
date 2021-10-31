@@ -1,12 +1,12 @@
-### Course for EDC
+## Course for EDC
 
-##### Hello_STM_32
+#### Hello_STM_32
 * my first STM project.
 
-##### Hello_STM_vsceode
+#### Hello_STM_vsceode
 * learn how to build a STM32 projedt and how to use vscode to write and debug codes.
 
-##### SerialCommunication
+#### SerialCommunication
 * learn how to use Bluetooth and ZigBee module to realize communication function.
 * a simple task:
   */---The two groups cooperate, zigbee pairing and communicating with each other.
