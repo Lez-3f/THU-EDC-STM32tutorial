@@ -1,15 +1,8 @@
-/*
- * @Autor: Zel
- * @Email: 2995441811@qq.com
- * @Date: 2021-10-24 16:07:47
- * @LastEditors: Zel
- * @LastEditTime: 2021-11-03 23:21:10
- */
 /**
   ******************************************************************************
-  * @file    gpio.h
+  * @file    usart.h
   * @brief   This file contains all the function prototypes for
-  *          the gpio.c file
+  *          the usart.c file
   ******************************************************************************
   * @attention
   *
@@ -24,8 +17,8 @@
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __GPIO_H__
-#define __GPIO_H__
+#ifndef __USART_H__
+#define __USART_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -35,22 +28,29 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#include <stdarg.h>
+#include <stdio.h>
+#include <string.h>
+#include "delay.h"
 /* USER CODE END Includes */
 
-/* USER CODE BEGIN Private defines */
+extern UART_HandleTypeDef huart2;
 
+/* USER CODE BEGIN Private defines */
+#define UART_COMM huart2
+#define MAXSTRBUF 128
 /* USER CODE END Private defines */
 
-void MX_GPIO_Init(void);
+void MX_USART2_UART_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+  void uprintf(UART_HandleTypeDef* huart, const char* fmt, ...);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
 }
 #endif
-#endif /*__ GPIO_H__ */
+
+#endif /* __USART_H__ */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

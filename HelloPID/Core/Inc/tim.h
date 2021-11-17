@@ -1,15 +1,8 @@
-/*
- * @Autor: Zel
- * @Email: 2995441811@qq.com
- * @Date: 2021-10-24 16:07:47
- * @LastEditors: Zel
- * @LastEditTime: 2021-11-03 23:21:10
- */
 /**
   ******************************************************************************
-  * @file    gpio.h
+  * @file    tim.h
   * @brief   This file contains all the function prototypes for
-  *          the gpio.c file
+  *          the tim.c file
   ******************************************************************************
   * @attention
   *
@@ -24,8 +17,8 @@
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __GPIO_H__
-#define __GPIO_H__
+#ifndef __TIM_H__
+#define __TIM_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -38,11 +31,35 @@ extern "C" {
 
 /* USER CODE END Includes */
 
-/* USER CODE BEGIN Private defines */
+extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim5;
+extern TIM_HandleTypeDef htim8;
 
+/* USER CODE BEGIN Private defines */
+#define TIM_LB_SP htim3
+#define TIM_LF_SP htim4
+#define TIM_RF_SP htim5
+#define TIM_RB_SP htim8
+#define TIM_PID htim2
+#define TIM_PWM htim1
+
+#define TIM_CH_RB_PWM TIM_CHANNEL_1
+#define TIM_CH_LB_PWM TIM_CHANNEL_2
+#define TIM_CH_RF_PWM TIM_CHANNEL_3
+#define TIM_CH_LF_PWM TIM_CHANNEL_4
 /* USER CODE END Private defines */
 
-void MX_GPIO_Init(void);
+void MX_TIM1_Init(void);
+void MX_TIM2_Init(void);
+void MX_TIM3_Init(void);
+void MX_TIM4_Init(void);
+void MX_TIM5_Init(void);
+void MX_TIM8_Init(void);
+
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN Prototypes */
 
@@ -51,6 +68,7 @@ void MX_GPIO_Init(void);
 #ifdef __cplusplus
 }
 #endif
-#endif /*__ GPIO_H__ */
+
+#endif /* __TIM_H__ */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -1,0 +1,6 @@
+EIDE_UNIFY_BUILDER := 1
+CFLAGS := -std=c17 -c -x c -mthumb -mcpu=cortex-m3 -Ofast -Wall -g -ffunction-sections -fdata-sections -I./.eide/deps -I./Drivers/CMSIS/Include -I./Drivers/CMSIS/Device/ST/STM32F1xx/Include -I./Core/Src -I./Core/Inc -I./Drivers/STM32F1xx_HAL_Driver/Src -I./Drivers/STM32F1xx_HAL_Driver/Inc -I./Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -DUSE_HAL_DRIVER -DSTM32F103xE
+CXXFLAGS := -std=c++17 -c -x c++ -mthumb -mcpu=cortex-m3 -Ofast -Wall -g -ffunction-sections -fdata-sections -I./.eide/deps -I./Drivers/CMSIS/Include -I./Drivers/CMSIS/Device/ST/STM32F1xx/Include -I./Core/Src -I./Core/Inc -I./Drivers/STM32F1xx_HAL_Driver/Src -I./Drivers/STM32F1xx_HAL_Driver/Inc -I./Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -DUSE_HAL_DRIVER -DSTM32F103xE
+ASMFLAGS := -x assembler -x assembler-with-cpp -c -mthumb -mcpu=cortex-m3 -g -ffunction-sections -fdata-sections -I./.eide/deps -I./Drivers/CMSIS/Include -I./Drivers/CMSIS/Device/ST/STM32F1xx/Include -I./Core/Src -I./Core/Inc -I./Drivers/STM32F1xx_HAL_Driver/Src -I./Drivers/STM32F1xx_HAL_Driver/Inc -I./Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
+LDFLAGS := -mthumb -mcpu=cortex-m3 -T "c:/Users/86181/Documents/vscode/STM32/HelloPID/STM32F103RCTx_FLASH.ld" --specs=nosys.specs -Wl,--gc-sections -Wl,--print-memory-usage -Wl,-Map=./build/Debug/HelloPID.map
+LDLIBS := -lm
